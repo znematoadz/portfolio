@@ -137,7 +137,10 @@ main {
     font-size: 2rem;
     border: 3px set-text-color($primary-color) solid;
     padding: 1.5rem 2.5rem;
+    text-align: center;
     margin-bottom: 3rem;
+
+    width: 75%;
     @include easeOut;
 
     a {
