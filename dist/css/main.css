@@ -65,6 +65,8 @@
     transition: all 0.5s ease-out; }
     .menu .menu-item.show {
       transform: translate3d(0, 0, 0); }
+    .menu .menu-item.current > a {
+      color: #eece1a; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
@@ -75,6 +77,8 @@
     color: #fff;
     text-decoration: none;
     transition: all 0.5s ease-out; }
+    .menu .nav-link:hover {
+      color: #eece1a; }
 
 .menu-item:nth-child(1) {
   transition-delay: 0.15s; }
