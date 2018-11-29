@@ -18,6 +18,7 @@
     .lg-heading {
       line-height: 1;
       margin-bottom: 1rem;
+      font-size: 5rem;
     }
   }
 
@@ -69,7 +70,18 @@
     margin-top: 10vh;
   }
 
+  h1 {
+    &.lg-heading {
+      font-size: 4rem;
+    }
+  }
   .projects {
     grid-template-columns: 1fr;
+  }
+
+  .boxes {
+    div {
+      font-size: 1rem;
+    }
   }
 }
