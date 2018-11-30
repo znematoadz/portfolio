@@ -8,6 +8,10 @@
   .projects {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .btn {
+    font-size: 0.8rem;
+  }
 }
 
 @include mediaMd {
@@ -70,6 +74,10 @@
       font-size: 1.5rem;
     }
   }
+
+  .btn {
+    font-size: 0.8rem;
+  }
 }
 
 @include mediaSm {
@@ -112,5 +120,13 @@
 
   .projects {
     grid-template-columns: 1fr;
+  }
+
+  .boxes {
+    div {
+      a {
+        margin: 0 0rem;
+      }
+    }
   }
 }
