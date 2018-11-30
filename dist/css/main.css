@@ -162,7 +162,7 @@ main {
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: "bioimage bio bio" "job1 job2 job3";
+  grid-template-areas: "bioimage bio bio" "job1 job2 job3";
   grid-template-columns: repeat(3, 1fr); }
   .about-info .bio-image {
     grid-area: bioimage;
@@ -185,8 +185,13 @@ main {
 
 .projects {
   display: grid;
-  grid-gap: 0.7rem;
+  grid-gap: 1.25rem;
   grid-template-columns: repeat(3, 1fr); }
+  .projects .item {
+    overflow: hidden; }
+    .projects .item:hover .btn, .projects .item:hover .btn-dark, .projects .item:hover .btn-light {
+      opacity: 0.8;
+      transition: all 0.5s ease-out; }
   .projects img {
     width: 100%;
     border: 3px #fff solid; }
@@ -220,21 +225,26 @@ main {
         color: #000; }
 
 .btn, .btn-dark, .btn-light {
-  display: block;
   padding: 0.5rem 1rem;
   border: 0;
-  margin-bottom: 0.3rem; }
+  margin: 0;
+  transform: translateY(-50px);
+  opacity: 0; }
   .btn:hover, .btn-dark:hover, .btn-light:hover {
     background: #eece1a;
     color: #000; }
 
 .btn-dark {
   background: black;
-  color: #fff; }
+  color: #fff;
+  float: right;
+  width: 50%; }
 
 .btn-light {
   background: #a2c3f1;
-  color: #000; }
+  color: #000;
+  float: left;
+  width: 50%; }
 
 #main-footer {
   padding: 1rem;
@@ -285,7 +295,7 @@ main {
       width: 150px;
       height: 150px; }
   .about-info {
-    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
+    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
     grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: repeat(2, 1fr); }
@@ -293,12 +303,24 @@ main {
     width: 100%;
     font-size: 1.5rem; } }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 575px) {
   main#home h1 {
     margin-top: 10vh; }
   h1.lg-heading {
     font-size: 4rem; }
   .projects {
     grid-template-columns: 1fr; }
+    .projects .item {
+      height: auto; }
+    .projects img {
+      height: 100%; }
   .boxes div {
-    font-size: 1rem; } }
+    font-size: 1rem; }
+  .btn, .btn-dark, .btn-light {
+    font-size: 0.8rem; } }
+
+@media screen and (max-width: 500px) {
+  main#home h1 {
+    margin-top: 10vh; }
+  .projects {
+    grid-template-columns: 1fr; } }

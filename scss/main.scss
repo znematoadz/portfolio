@@ -111,11 +111,22 @@ main {
 
 .projects {
   display: grid;
-  grid-gap: 0.7rem;
+  grid-gap: 1.25rem;
   grid-template-columns: repeat(3, 1fr);
 
+  .item {
+    overflow: hidden;
+
+    &:hover {
+      .btn {
+        opacity: 0.8;
+        @include easeOut;
+      }
+    }
+  }
   img {
     width: 100%;
+
     border: 3px set-text-color($primary-color) solid;
 
     &:hover {
@@ -160,10 +171,11 @@ main {
 }
 
 .btn {
-  display: block;
   padding: 0.5rem 1rem;
   border: 0;
-  margin-bottom: 0.3rem;
+  margin: 0;
+  transform: translateY(-50px);
+  opacity: 0;
   &:hover {
     background: $secondary-color;
     color: set-text-color($secondary-color);
@@ -174,12 +186,16 @@ main {
   @extend .btn;
   background: darken($primary-color, 50);
   color: #fff;
+  float: right;
+  width: 50%;
 }
 
 .btn-light {
   @extend .btn;
   background: lighten($primary-color, 50);
   color: #000;
+  float: left;
+  width: 50%;
 }
 
 #main-footer {
