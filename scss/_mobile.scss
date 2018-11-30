@@ -82,13 +82,35 @@
       font-size: 4rem;
     }
   }
+
   .projects {
     grid-template-columns: 1fr;
+
+    .item {
+      height: auto;
+    }
+    img {
+      height: 100%;
+    }
   }
 
   .boxes {
     div {
       font-size: 1rem;
     }
+  }
+
+  .btn {
+    font-size: 0.8rem;
+  }
+}
+
+@include mediaXs {
+  main#home h1 {
+    margin-top: 10vh;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
   }
 }
