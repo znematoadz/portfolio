@@ -105,8 +105,7 @@ body {
   body#bg-img {
     background: url(../img/background.jpg);
     background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat; }
+    background-size: cover; }
     body#bg-img:after {
       content: "";
       position: absolute;
@@ -338,7 +337,9 @@ main {
       height: 100%; }
   .boxes div {
     width: 100%;
-    font-size: 1rem; } }
+    font-size: 1rem; }
+    .boxes div a {
+      margin: 0 0.5rem; } }
 
 @media screen and (max-width: 400px) {
   main#home h1 {
