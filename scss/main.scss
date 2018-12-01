@@ -135,12 +135,37 @@ main {
 
   .item {
     overflow: hidden;
+    position: relative;
     .description {
       position: absolute;
-      margin: 15px;
+      top: 0;
+      left: 0;
       opacity: 0;
+      display: inline-flex;
+      flex-flow: row wrap;
+      list-style: none inside;
+      text-align: center;
+      width: 100%;
+      margin: 0;
+      padding: 0;
       color: set-text-color($primary-color);
-      list-style: inside;
+      z-index: 1;
+      h3 {
+        border-radius: 6px 6px 0 0;
+        background: darken($primary-color, 50);
+        flex: 9999 1 100%;
+        font-weight: 900;
+        margin: 3px;
+      }
+      li {
+        background: darken($primary-color, 10);
+        color: set-text-color(darken($primary-color, 10));
+        border-radius: 3px;
+        flex: 1 1 auto;
+        margin: 3px;
+        padding: 0 3px;
+        font-weight: 600;
+      }
     }
 
     &:hover {
@@ -149,21 +174,20 @@ main {
         @include easeOut;
       }
       .description {
-        opacity: 1;
+        opacity: 0.7;
         @include easeOut;
       }
     }
   }
   img {
     width: 100%;
-
     border: 3px set-text-color($primary-color) solid;
     border-radius: 2% 2% 0 0;
     border-bottom: 10px solid $secondary-color;
     box-shadow: 0 0 10px #000;
     opacity: 0.9;
     &:hover {
-      opacity: 0.3;
+      opacity: 0.5;
       border-color: $secondary-color;
       @include easeOut;
     }
