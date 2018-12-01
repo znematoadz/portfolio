@@ -203,15 +203,27 @@ main {
   grid-template-columns: repeat(3, 1fr); }
   .projects .item {
     overflow: hidden; }
+    .projects .item .description {
+      position: absolute;
+      margin: 15px;
+      opacity: 0;
+      color: #fff;
+      list-style: inside; }
     .projects .item:hover .btn, .projects .item:hover .btn-dark, .projects .item:hover .btn-light {
-      opacity: 0.8;
+      opacity: 0.7;
+      transition: all 0.5s ease-out; }
+    .projects .item:hover .description {
+      opacity: 1;
       transition: all 0.5s ease-out; }
   .projects img {
     width: 100%;
     border: 3px #fff solid;
-    border-bottom: 10px solid #eece1a; }
+    border-radius: 2% 2% 0 0;
+    border-bottom: 10px solid #eece1a;
+    box-shadow: 0 0 10px #000;
+    opacity: 0.9; }
     .projects img:hover {
-      opacity: 0.5;
+      opacity: 0.3;
       border-color: #eece1a;
       transition: all 0.5s ease-out; }
 
@@ -281,9 +293,11 @@ main {
   .projects {
     grid-template-columns: repeat(4, 1fr); } }
 
-@media screen and (min-width: 769px) and (max-width: 1008px) {
+@media screen and (min-width: 769px) and (max-width: 1170px) {
   .projects {
     grid-template-columns: repeat(3, 1fr); }
+    .projects .item .description {
+      font-size: 0.8rem; }
   .btn, .btn-dark, .btn-light {
     font-size: 0.8rem; } }
 
