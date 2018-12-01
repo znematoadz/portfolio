@@ -104,12 +104,9 @@
 
   .boxes {
     div {
+      width: 100%;
       font-size: 1rem;
     }
-  }
-
-  .btn {
-    font-size: 0.8rem;
   }
 }
 
@@ -118,12 +115,20 @@
     margin-top: 10vh;
   }
 
+  h1 {
+    &.lg-heading {
+      font-size: 3rem;
+    }
+  }
+
   .projects {
     grid-template-columns: 1fr;
   }
 
   .boxes {
     div {
+      padding: 1rem 0;
+
       a {
         margin: 0 0rem;
       }
