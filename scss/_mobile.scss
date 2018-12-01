@@ -71,6 +71,11 @@
 
   .projects {
     grid-template-columns: repeat(2, 1fr);
+    .item {
+      .description {
+        font-size: 0.8rem;
+      }
+    }
   }
 
   .boxes {
@@ -98,13 +103,6 @@
 
   .projects {
     grid-template-columns: 1fr;
-
-    .item {
-      height: auto;
-    }
-    img {
-      height: 100%;
-    }
   }
 
   .boxes {
