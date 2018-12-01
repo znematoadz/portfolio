@@ -135,10 +135,21 @@ main {
 
   .item {
     overflow: hidden;
+    .description {
+      position: absolute;
+      margin: 15px;
+      opacity: 0;
+      color: set-text-color($primary-color);
+      list-style: inside;
+    }
 
     &:hover {
       .btn {
-        opacity: 0.8;
+        opacity: 0.7;
+        @include easeOut;
+      }
+      .description {
+        opacity: 1;
         @include easeOut;
       }
     }
@@ -147,9 +158,12 @@ main {
     width: 100%;
 
     border: 3px set-text-color($primary-color) solid;
+    border-radius: 2% 2% 0 0;
     border-bottom: 10px solid $secondary-color;
+    box-shadow: 0 0 10px #000;
+    opacity: 0.9;
     &:hover {
-      opacity: 0.5;
+      opacity: 0.3;
       border-color: $secondary-color;
       @include easeOut;
     }
